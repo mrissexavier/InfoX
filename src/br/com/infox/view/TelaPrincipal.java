@@ -57,11 +57,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        desktop.setPreferredSize(new java.awt.Dimension(539, 481));
+
         javax.swing.GroupLayout desktopLayout = new javax.swing.GroupLayout(desktop);
         desktop.setLayout(desktopLayout);
         desktopLayout.setHorizontalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 516, Short.MAX_VALUE)
+            .addGap(0, 539, Short.MAX_VALUE)
         );
         desktopLayout.setVerticalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,8 +84,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel2.setText("Systems ");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/infox/icons/998664_people_users_icon (1).png"))); // NOI18N
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmilyOliveiraXavier\\Desktop\\5443043_christmas_date_decoration_holiday_ornament_icon (1).png")); // NOI18N
 
         Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -109,6 +109,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menCadUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/infox/icons/998664_people_users_icon.png"))); // NOI18N
         menCadUsu.setText("Usuários");
         menCadUsu.setEnabled(false);
+        menCadUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menCadUsuActionPerformed(evt);
+            }
+        });
         menCad.add(menCadUsu);
 
         Menu.add(menCad);
@@ -162,10 +167,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(desktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGap(12, 12, 12)
                         .addComponent(jLabel2)
                         .addContainerGap(47, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -191,12 +196,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(lblData)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(desktop)
+                .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -233,6 +238,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         TelaSobre sobre = new TelaSobre();
         sobre.setVisible(true);
     }//GEN-LAST:event_menAjuSobActionPerformed
+
+    private void menCadUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadUsuActionPerformed
+        // as linhas abaixo abrem o form TelaUsuario dentro do desktoppane
+        TelaUsuario usuario = new TelaUsuario();
+        usuario.setVisible(true);
+        desktop.add(usuario);
+    }//GEN-LAST:event_menCadUsuActionPerformed
 
     /**
      * @param args the command line arguments
